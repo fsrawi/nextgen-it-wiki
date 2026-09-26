@@ -29,7 +29,7 @@ pipeline {
                 sh """
                     docker stop ${CONTAINER_NAME} || true
                     docker rm ${CONTAINER_NAME} || true
-                    docker run -d -p \({PORT}:3000 --name\){CONTAINER_NAME} ${IMAGE_NAME}
+                   docker run -d -p \({PORT}:3000 --name\){CONTAINER_NAME} ${IMAGE_NAME}
                 """
             }
         }
